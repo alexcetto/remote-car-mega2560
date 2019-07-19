@@ -1,17 +1,28 @@
+# Build and install
+
+Using cmake and make:
+
+```
+cmake -B build
+make all build/Makefile
+
+```
+
+
 # Description
 
 AVR ATmega port of freeRTOS
 A port of freeRTOS configured to use the Watchdog Timer on AVR ATmega devices and will operate with almost any classic Arduino device from Arduino, SeeedStudio, Sparkfun, Freetronics or Pololu.
 
 The [Goldilocks Analogue story of adding a dual channel DAC to a 1284p classic Arduino board is told here](https://feilipu.me/?s=Goldilocks+Analogue).
-The [Goldilocks Analogue - Kickstarter Campaign](https://www.kickstarter.com/projects/feilipu/goldilocks-analogue-classic-arduino-audio-superpow/) was successfully funded. 
+The [Goldilocks Analogue - Kickstarter Campaign](https://www.kickstarter.com/projects/feilipu/goldilocks-analogue-classic-arduino-audio-superpow/) was successfully funded.
 It was also a Hackaday Prize 2015 Quarter Finalist.
 
 ![Goldilocks Analogue](https://a.fsdn.com/con/app/proj/avrfreertos/screenshots/Title%20Image.JPG "Goldilocks Analogue")
 
 The first [Goldilocks 1284p story is here](https://feilipu.me/2013/03/08/goldilocks-1284p-arduino-uno-clone/).
 Ths idea was launched as a [Pozible campaign in 2013](https://www.pozible.com/goldilocks/).
-It was successfully funded and the [Goldilocks](https://freetronics.com/goldilocks/) was developed and supported by Freetronics. 
+It was successfully funded and the [Goldilocks](https://freetronics.com/goldilocks/) was developed and supported by Freetronics.
 
 The main repo has been hosted on [Sourceforge avrfreertos](https://sourceforge.net/projects/avrfreertos/) since 2011, and has been [downloaded over 25,000 times](https://sourceforge.net/projects/avrfreertos/files/stats/timeline?dates=2011-09-22+to+2017-11-30).
 Going forward Sourceforge will be updated less often and only with major releases.
