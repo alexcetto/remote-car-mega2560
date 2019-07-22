@@ -2,7 +2,7 @@
 
 This project is composed of: 
 
-- a remote controlled car build with the (Makeblock Ultimate Kit)[https://www.makeblock.com/steam-kits/mbot-ultimate]
+- a remote controlled car build with the [Makeblock Ultimate Kit](https://www.makeblock.com/steam-kits/mbot-ultimate)
 - a PS3 controller, controlling the car using bluetooth
 - some form of obstacle detection (tbd)
 - some form of collision detection (tbd)
