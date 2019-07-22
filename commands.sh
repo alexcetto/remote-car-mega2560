@@ -1,0 +1,77 @@
+ARDUINOAVR=$ARDUINOIDE//hardware/arduino/avr
+TEMPBUILD=/tmp/arduino_build_843244
+ARDUINOIDE=/home/alla02/Downloads/arduino-1.8.9
+PROJECTCODE="/home/alla02/Documents/Arduino/Elegoo The Most Complete Starter Kit for MEGA V1.0.2019.07.18/English/code"
+
+$ARDUINOIDE//arduino-builder -dump-prefs -logger=machine -hardware $ARDUINOIDE//hardware -tools $ARDUINOIDE//tools-builder -tools $ARDUINOIDE//hardware/tools/avr -built-in-libraries $ARDUINOIDE//libraries -libraries /home/alla02/Arduino/libraries -fqbn=arduino:avr:mega:cpu=atmega2560 -vid-pid=0X2341_0X0042 -ide-version=10809 -build-path $TEMPBUILD/ -warnings=null -prefs=build.warn_data_percentage=75 -prefs=runtime.tools.avr-gcc.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.avr-gcc-5.4.0-atmel3.6.1-arduino2.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.arduinoOTA.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.arduinoOTA-1.2.1.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.avrdude.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.avrdude-6.3.0-arduino14.path=$ARDUINOIDE//hardware/tools/avr -verbose $PROJECTCODE//Lesson 4 RGB LED/RGB_LED/RGB_LED.ino
+$ARDUINOIDE//arduino-builder -compile -logger=machine -hardware $ARDUINOIDE//hardware -tools $ARDUINOIDE//tools-builder -tools $ARDUINOIDE//hardware/tools/avr -built-in-libraries $ARDUINOIDE//libraries -libraries /home/alla02/Arduino/libraries -fqbn=arduino:avr:mega:cpu=atmega2560 -vid-pid=0X2341_0X0042 -ide-version=10809 -build-path $TEMPBUILD/ -warnings=null -prefs=build.warn_data_percentage=75 -prefs=runtime.tools.avr-gcc.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.avr-gcc-5.4.0-atmel3.6.1-arduino2.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.arduinoOTA.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.arduinoOTA-1.2.1.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.avrdude.path=$ARDUINOIDE//hardware/tools/avr -prefs=runtime.tools.avrdude-6.3.0-arduino14.path=$ARDUINOIDE//hardware/tools/avr -verbose $PROJECTCODE//Lesson 4 RGB LED/RGB_LED/RGB_LED.ino
+# Using board 'mega' from platform in folder: $ARDUINOIDE//hardware/arduino/avr
+# Using core 'arduino' from platform in folder: $ARDUINOIDE//hardware/arduino/avr
+# Detecting libraries used...
+avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $TEMPBUILD/sketch/RGB_LED.ino.cpp -o /dev/null
+# Generating function prototypes...
+avr-g++ -c -g -Os -w -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -flto -w -x c++ -E -CC -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $TEMPBUILD/sketch/RGB_LED.ino.cpp -o $TEMPBUILD/preproc/ctags_target_for_gcc_minus_e.cpp
+$ARDUINOIDE//tools-builder/ctags/5.8-arduino11/ctags -u --language-force=c++ -f - --c++-kinds=svpf --fields=KSTtzns --line-directives $TEMPBUILD/preproc/ctags_target_for_gcc_minus_e.cpp
+# Compiling sketch...
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $TEMPBUILD/sketch/RGB_LED.ino.cpp -o $TEMPBUILD/sketch/RGB_LED.ino.cpp.o
+# Compiling libraries...
+# Compiling core...
+avr-gcc -c -g -x assembler-with-cpp -flto -MMD -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/wiring_pulse.S -o $TEMPBUILD/core/wiring_pulse.S.o
+avr-gcc -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/WInterrupts.c -o $TEMPBUILD/core/WInterrupts.c.o
+avr-gcc -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/wiring_analog.c -o $TEMPBUILD/core/wiring_analog.c.o
+avr-gcc -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/wiring_digital.c -o $TEMPBUILD/core/wiring_digital.c.o
+avr-gcc -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/wiring_pulse.c -o $TEMPBUILD/core/wiring_pulse.c.o
+avr-gcc -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/hooks.c -o $TEMPBUILD/core/hooks.c.o
+avr-gcc -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/wiring_shift.c -o $TEMPBUILD/core/wiring_shift.c.o
+avr-gcc -c -g -Os -std=gnu11 -ffunction-sections -fdata-sections -MMD -flto -fno-fat-lto-objects -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/wiring.c -o $TEMPBUILD/core/wiring.c.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/CDC.cpp -o $TEMPBUILD/core/CDC.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/Print.cpp -o $TEMPBUILD/core/Print.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/IPAddress.cpp -o $TEMPBUILD/core/IPAddress.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/PluggableUSB.cpp -o $TEMPBUILD/core/PluggableUSB.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/HardwareSerial.cpp -o $TEMPBUILD/core/HardwareSerial.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/HardwareSerial3.cpp -o $TEMPBUILD/core/HardwareSerial3.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/HardwareSerial0.cpp -o $TEMPBUILD/core/HardwareSerial0.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/HardwareSerial2.cpp -o $TEMPBUILD/core/HardwareSerial2.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/HardwareSerial1.cpp -o $TEMPBUILD/core/HardwareSerial1.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/WMath.cpp -o $TEMPBUILD/core/WMath.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/Tone.cpp -o $TEMPBUILD/core/Tone.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/Stream.cpp -o $TEMPBUILD/core/Stream.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/USBCore.cpp -o $TEMPBUILD/core/USBCore.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/WString.cpp -o $TEMPBUILD/core/WString.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/new.cpp -o $TEMPBUILD/core/new.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/abi.cpp -o $TEMPBUILD/core/abi.cpp.o
+avr-g++ -c -g -Os -std=gnu++11 -fpermissive -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -Wno-error=narrowing -MMD -flto -mmcu=atmega2560 -DF_CPU=16000000L -DARDUINO=10809 -DARDUINO_AVR_MEGA2560 -DARDUINO_ARCH_AVR -I$ARDUINOAVR/cores/arduino -I$ARDUINOAVR/variants/mega $ARDUINOAVR/cores/arduino/main.cpp -o $TEMPBUILD/core/main.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/CDC.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/HardwareSerial.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/HardwareSerial0.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/HardwareSerial1.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/HardwareSerial2.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/HardwareSerial3.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/IPAddress.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/PluggableUSB.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/Print.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/Stream.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/Tone.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/USBCore.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/WInterrupts.c.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/WMath.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/WString.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/abi.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/hooks.c.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/main.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/new.cpp.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/wiring.c.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/wiring_analog.c.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/wiring_digital.c.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/wiring_pulse.S.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/wiring_pulse.c.o
+avr-gcc-ar rcs $TEMPBUILD/core/core.a $TEMPBUILD/core/wiring_shift.c.o
+# Linking everything together...
+avr-gcc -Os -g -flto -fuse-linker-plugin -Wl,--gc-sections,--relax -mmcu=atmega2560 -o $TEMPBUILD/RGB_LED.ino.elf $TEMPBUILD/sketch/RGB_LED.ino.cpp.o $TEMPBUILD/core/core.a -L$TEMPBUILD/ -lm
+avr-objcopy -O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0 $TEMPBUILD/RGB_LED.ino.elf $TEMPBUILD/RGB_LED.ino.eep
+avr-objcopy -O ihex -R .eeprom $TEMPBUILD/RGB_LED.ino.elf $TEMPBUILD/RGB_LED.ino.hex
+avr-size -A $TEMPBUILD/RGB_LED.ino.elf
+# Sketch uses 2182 bytes (0%) of program storage space. Maximum is 253952 bytes.
+# Global variables use 15 bytes (0%) of dynamic memory, leaving 8177 bytes for local variables. Maximum is 8192 bytes.
+# Uploading...
+avrdude -C$ARDUINOIDE/hardware/tools/avr/etc/avrdude.conf -v -patmega2560 -cwiring -P/dev/ttyACM0 -b115200 -D -Uflash:w:$TEMPBUILD/RGB_LED.ino.hex:i
